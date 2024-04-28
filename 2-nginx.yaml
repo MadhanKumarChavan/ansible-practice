@@ -1,7 +1,12 @@
 - name: nginx
-  hosts: web
+  hosts: all
   become: yes
   tasks:
+   - name: Remove the nginx package
+     ansible.builtin.dnf:
+      name: httpd
+      state: absent
+
    - name: Install the latest version of Apache
      ansible.builtin.dnf:
       name: nginx
