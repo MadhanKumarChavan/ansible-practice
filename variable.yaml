@@ -1,9 +1,7 @@
 - name: declare varibales
   hosts: localhost
-  vars:
-    name: madhan
-    course: devops
-    age: 29
+  vars_files:
+    -vars.yaml
   become: yes
   tasks:
     - name: print variables 
