@@ -1,0 +1,19 @@
+- name: declare varibales
+  hosts: localhost
+  vars:
+    name: madhan
+    course: devops
+    age: 29
+  become: yes
+  tasks:
+    - name: print variables 
+      ansible.builtin.debug:
+         msg: hi this {{name}} with age of {{age}} upgrading my skills for {{course}}jobs
+    
+    - name: print variables 
+      vars:
+        name: raja
+        course: terraform
+        age: 299
+      ansible.builtin.debug:
+         msg: hi this {{name}} with age of {{age}} upgrading my skills for {{course}}jobs
