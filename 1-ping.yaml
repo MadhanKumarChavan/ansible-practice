@@ -1,0 +1,6 @@
+-name: ping ip
+ host: web
+ become: yes
+ tasks:
+  - name: Example from an Ansible Playbook
+  ansible.builtin.ping:
