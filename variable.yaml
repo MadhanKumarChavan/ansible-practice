@@ -1,7 +1,7 @@
 - name: declare varibales
   hosts: localhost
   vars_files:
-    -vars.yaml
+    - vars.yaml
   become: yes
   tasks:
     - name: print variables 
